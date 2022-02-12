@@ -1,0 +1,78 @@
+<div class="header" id="header">
+  <div class="container px-0">
+      <a href="index.html" ><img class="logo" src="assets/images/logo_new.png"></a>
+      <div class="search widget-ui">
+          <form action="#">
+              <input type="text" placeholder="Search.." id="autocomplete">
+              <button type="submit" ><i class="fa fa-search"></i></button>
+          </form>
+      </div>
+      <div class="user-block">
+          <div class="login">
+              <a href="Login.html" title="Login"><i class="far fa-user fa-2x"></i><span></span></a>
+          </div>
+          <div class="cart">
+              <a href="shopping-cart.html" title="Cart"><i class="fa fa-shopping-cart fa-2x"></i>
+                  <span>1</span>
+              </a>
+              <div class="cart-hover">
+                  <div class="selected-item">
+                      <table>
+                          <tbody>
+                              <tr>
+                                  <td class="si-pic">
+                                      <img src="aseets/images/fan-2.png" alt="" width="90px" height="90px">
+                                  </td>
+                                  <td class="si-text">
+                                      <div class="product-selected">
+                                          <p>$9.00 x 1</p>
+                                          <h6>Senko LL1338 Mezzanine Fan</h6>
+                                      </div>
+                                  </td>
+                                  <td class="si-close">
+                                      <i class="fas fa-times"></i>
+                                  </td>
+                              </tr>
+                          </tbody>
+                      </table>
+                  </div>
+                  <div class="selected-total">
+                      <hr>
+                      <span>total:</span>
+                      <h5>$9.00</h5>
+                  </div>
+                  <div class="selected-button">
+                      <a href="shopping-cart.html" class="view-cart-btn">VIEW CART</a>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+<div class="container-fluid menu">
+  <div class="container" style="padding-left: 0px">
+      <div id="menu">
+          <ul>
+              <li style="margin-left: 0px !important;"><a routerLink="/"  class="active">Home</a></li>
+              <li><a routerLink="/introduce">Introduce</a></li>
+              <li id="product"><a routerLink="/product">Product <i class="fa fa-angle-down"></i></a>
+                  <ul class="product-menu-dropdown">
+                      <li><a routerLink="/fans">fans</a></li>
+                      <li><a routerLink="/appliances">appliances</a></li>
+                      <li><a routerLink="/waterheater">water heater</a></li>
+                      <li><a routerLink="/lightning">lightning</a></li>
+                  </ul>
+              </li>
+              <li><a routerLink="/contact">Contact</a></li>
+              <li id="pages"><a routerLink="/page">Pages <i class="fa fa-angle-down"></i></a>
+                  <ul class="pages-menu-dropdown">
+                      <li><a routerLink="/shooppingcart">shopping cart</a></li>
+                      <li><a routerLink="/faq">faq</a></li>
+                      <li><a routerLink="/register">register</a></li>
+                      <li><a routerLink="/login">login</a></li>
+                  </ul>
+              </li>
+          </ul>
+      </div>
+  </div>
+</div>
