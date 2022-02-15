@@ -79,179 +79,30 @@
                               <p>Show 01 - 09 of 45 Products</p>
                           </div>
                       </div>
-                      <div class="row product-list">
-                          <div class="pl-items">
-                              <figure>
-                                  <a href="">
+                      <div>
+                        <div class="row product-list">
+                          <div class="pl-items" *ngFor="let s of productList" >
+                            <figure >
+                                <a routerLink="/productdetail/{{s.ProductId}}"  >
+                                    <img src="assets/images/{{s.ProductImage}}" alt="" >
+                                    <div class="item-action">
+                                        <a href="#" id="buy" title="Add to cart"><i class="fas fa-shopping-cart"></i></a>
+                                        <a  routerLink="/productdetail/{{s.ProductId}}" id="quick-view" title="Quick view"><i class="fas fa-eye"></i><span> quick view</span></a>
+                                        <a routerLink="/productdetail/{{s.ProductId}}" id="compare" title="Compare"><i class="fas fa-random"></i></a>
+                                    </div>
+                                    <figcaption>
+                                        <p class="text-truncate">{{s.ProductName}}</p>
 
-                                      <img src="assets/images/Promotion-5png.png" alt="" >
-                                      <div class="item-action">
-                                          <a href="#" id="buy" title="Add to cart"><i class="fas fa-shopping-cart"></i></a>
-                                          <a href="#" id="quick-view" title="Quick view"><i class="fas fa-eye"></i><span> quick view</span></a>
-                                          <a href="#" id="compare" title="Compare"><i class="fas fa-random"></i></a>
-                                      </div>
-                                      <figcaption>
-                                          <p class="text-truncate">Refrigerator Family Hub 641L</p>
+                                        <span id="pro-price">{{s.Price}}</span>
 
-                                          <span id="pro-price">$2142.86</span>
+                                    </figcaption>
+                                </a>
+                            </figure>
+                        </div>
 
-                                      </figcaption>
-                                  </a>
-                              </figure>
-                          </div>
-                          <div class="pl-items">
-                              <figure>
-                                  <a href="">
-
-                                      <img src="assets/images/BestSelling-2.png" alt="" >
-                                      <div class="item-action">
-                                          <a href="#" id="buy" title="Add to cart"><i class="fas fa-shopping-cart"></i></a>
-                                          <a href="#" id="quick-view" title="Quick view"><i class="fas fa-eye"></i><span> quick view</span></a>
-                                          <a href="#" id="compare" title="Compare"><i class="fas fa-random"></i></a>
-                                      </div>
-                                      <figcaption>
-                                          <p class="text-truncate">Robot Vacuum Cleaner ILIFE X900</p>
-
-                                          <span id="pro-price">$571.428</span>
-
-                                      </figcaption>
-                                  </a>
-                              </figure>
-                          </div>
-                          <div class="pl-items">
-                              <figure>
-                                  <a href="">
-
-                                      <img src="assets/images/BestSelling-4.png" alt="" >
-                                      <div class="item-action">
-                                          <a href="#" id="buy" title="Add to cart"><i class="fas fa-shopping-cart"></i></a>
-                                          <a href="#" id="quick-view" title="Quick view"><i class="fas fa-eye"></i><span> quick view</span></a>
-                                          <a href="#" id="compare" title="Compare"><i class="fas fa-random"></i></a>
-                                      </div>
-                                      <figcaption>
-                                          <p class="text-truncate">Induction Cooker GGM GCI42-2I</p>
-
-                                          <span id="pro-price">$566.66</span>
-
-                                      </figcaption>
-                                  </a>
-                              </figure>
-                          </div>
-                          <div class="pl-items">
-                              <figure>
-                                  <a href="">
-
-                                      <img src="assets/images/Popular-16.png" alt="" >
-                                      <div class="item-action">
-                                          <a href="#" id="buy" title="Add to cart"><i class="fas fa-shopping-cart"></i></a>
-                                          <a href="#" id="quick-view" title="Quick view"><i class="fas fa-eye"></i><span> quick view</span></a>
-                                          <a href="#" id="compare" title="Compare"><i class="fas fa-random"></i></a>
-                                      </div>
-                                      <figcaption>
-                                          <p class="text-truncate">BM lamp 135W</p>
-
-                                          <span id="pro-price">$15.238</span>
-
-                                      </figcaption>
-                                  </a>
-                              </figure>
-                          </div>
-                          <div class="pl-items">
-                              <figure>
-                                  <a href="">
-
-                                      <img src="assets/images/Popular-19.png" alt="">
-                                      <div class="item-action">
-                                          <a href="#" id="buy" title="Add to cart"><i class="fas fa-shopping-cart"></i></a>
-                                          <a href="#" id="quick-view" title="Quick view"><i class="fas fa-eye"></i><span> quick view</span></a>
-                                          <a href="#" id="compare" title="Compare"><i class="fas fa-random"></i></a>
-                                      </div>
-                                      <figcaption>
-                                          <p class="text-truncate">Air-cooled fan cooled by steam Kozaika 60l</p>
-
-                                          <span id="pro-price">$276.190</span>
-
-                                      </figcaption>
-                                  </a>
-                              </figure>
-                          </div>
-                          <div class="pl-items">
-                              <figure>
-                                  <a href="">
-
-                                      <img src="assets/images/Popular-22.png" alt="" >
-                                      <div class="item-action">
-                                          <a href="#" id="buy" title="Add to cart"><i class="fas fa-shopping-cart"></i></a>
-                                          <a href="#" id="quick-view" title="Quick view"><i class="fas fa-eye"></i><span> quick view</span></a>
-                                          <a href="#" id="compare" title="Compare"><i class="fas fa-random"></i></a>
-                                      </div>
-                                      <figcaption>
-                                          <p class="text-truncate">Electrolux Inverter 8 Kg Washing Machine EWF8025CQSA</p>
-
-                                          <span id="pro-price">$465.66</span>
-
-                                      </figcaption>
-                                  </a>
-                              </figure>
-                          </div>
-                          <div class="pl-items">
-                              <figure>
-                                  <a href="">
-
-                                      <img src="assets/images/Popular-24.png" alt="" >
-                                      <div class="item-action">
-                                          <a href="#" id="buy" title="Add to cart"><i class="fas fa-shopping-cart"></i></a>
-                                          <a href="#" id="quick-view" title="Quick view"><i class="fas fa-eye"></i><span> quick view</span></a>
-                                          <a href="#" id="compare" title="Compare"><i class="fas fa-random"></i></a>
-                                      </div>
-                                      <figcaption>
-                                          <p class="text-truncate">Blender BLENDTEC CONNOISSEUR 825</p>
-
-                                          <span id="pro-price">$1.66</span>
-
-                                      </figcaption>
-                                  </a>
-                              </figure>
-                          </div>
-                          <div class="pl-items">
-                              <figure>
-                                  <a href="">
-
-                                      <img src="assets/images/Popular-27.png" alt="">
-                                      <div class="item-action">
-                                          <a href="#" id="buy" title="Add to cart"><i class="fas fa-shopping-cart"></i></a>
-                                          <a href="#" id="quick-view" title="Quick view"><i class="fas fa-eye"></i><span> quick view</span></a>
-                                          <a href="#" id="compare" title="Compare"><i class="fas fa-random"></i></a>
-                                      </div>
-                                      <figcaption>
-                                          <p class="text-truncate">Ceiling fan 6 blades Panasonic F-70ZBP</p>
-
-                                          <span id="pro-price">$790.476</span>
-
-                                      </figcaption>
-                                  </a>
-                              </figure>
-                          </div>
-                          <div class="pl-items">
-                              <figure>
-                                  <a href="">
-
-                                      <img src="assets/images/Popular-29.png" alt="" >
-                                      <div class="item-action">
-                                          <a href="#" id="buy" title="Add to cart"><i class="fas fa-shopping-cart"></i></a>
-                                          <a href="#" id="quick-view" title="Quick view"><i class="fas fa-eye"></i><span> quick view</span></a>
-                                          <a href="#" id="compare" title="Compare"><i class="fas fa-random"></i></a>
-                                      </div>
-                                      <figcaption>
-                                          <p class="text-truncate">Wall fan Asia Vina L1602</p>
-
-                                          <span id="pro-price">$45.23</span>
-
-                                      </figcaption>
-                                  </a>
-                              </figure>
-                          </div>
                       </div>
+                      </div>
+
                       <a href="#" class="product-lm"><span>LOAD MORE</span></a>
                   </div>
               </div>

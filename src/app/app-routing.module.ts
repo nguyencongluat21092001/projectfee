@@ -1,3 +1,4 @@
+import { ProductdetailComponent } from './page/productdetail/productdetail.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AppliancesComponent } from './page/appliances/appliances.component';
@@ -28,6 +29,8 @@ const routes: Routes = [
 {path:'appliances',component:AppliancesComponent},
 {path:'waterheater',component:WaterheaterComponent},
 {path:'lightning',component:LightningComponent},
+{path:'productdetail/:id',component:ProductdetailComponent},
+
 
 {
   path: '**',

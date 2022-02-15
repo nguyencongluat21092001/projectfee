@@ -23,7 +23,11 @@ import { FansComponent } from './page/fans/fans.component';
 import { AppliancesComponent } from './page/appliances/appliances.component';
 import { WaterheaterComponent } from './page/waterheater/waterheater.component';
 import { LightningComponent } from './page/lightning/lightning.component';
+import { ProductdetailComponent } from './page/productdetail/productdetail.component';
 
+// phai tu import
+import {HttpClientModule} from '@angular/common/http';
+//.
 
 @NgModule({
   declarations: [
@@ -48,10 +52,14 @@ import { LightningComponent } from './page/lightning/lightning.component';
     AppliancesComponent,
     WaterheaterComponent,
     LightningComponent,
+    ProductdetailComponent,
+    ProductdetailComponent
+
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

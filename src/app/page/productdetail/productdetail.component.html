@@ -1,0 +1,334 @@
+<div class="wraper">
+  <div class="container-fluid">
+      <a href="#" class="totop"><i class="fa fa-chevron-up"></i></a>
+      <!-- breadcrumb section begin -->
+      <div class="breadcrumb-section">
+          <div class="container">
+              <nav aria-label="breadcrumb">
+                  <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li class="breadcrumb-item"><a href="fans.html"> Fans</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">{{productDetail[0].ProductName}}</li>
+                  </ol>
+              </nav>
+          </div>
+      </div>
+      <!-- breadcrumb section end -->
+      <section class="product">
+          <div class="container">
+              <div class="row">
+                  <div class="col-lg-3">
+                      <div class="filter-widget">
+                          <h4 class="fw-title">Categories</h4>
+                          <ul class="filter-categories">
+                              <li><a href="fans.html" class="disabled">Fans</a></li>
+                              <li><a href="appliances.html">Appliances</a></li>
+                              <li><a href="water-heater.html">Water Heater</a></li>
+                              <li><a href="lightning.html">Lightning</a></li>
+                          </ul>
+                      </div>
+                      <div class="filter-widget">
+                          <h4 class="fw-title">Brand</h4>
+                          <div class="form-check">
+                              <input type="checkbox" class="form-check-input" value="" id="bc-toshiba" checked>
+                              <label for="bc-toshiba">Toshiba</label>
+                          </div>
+                          <div class="form-check">
+                              <input type="checkbox" class="form-check-input" value="" id="bc-panasonic">
+                              <label for="bc-panasonic">Panasonic</label>
+                          </div>
+                          <div class="form-check">
+                              <input type="checkbox" class="form-check-input" value="" id="bc-simon">
+                              <label for="bc-simon">Simon</label>
+                          </div>
+                          <div class="form-check">
+                              <input type="checkbox" class="form-check-input" value="" id="bc-schneider">
+                              <label for="bc-schneider">Schneider</label>
+                          </div>
+                          <div class="form-check">
+                              <input type="checkbox" class="form-check-input" value="" id="bc-legrand">
+                              <label for="bc-legrand">Legrand</label>
+                          </div>
+                      </div>
+                      <div class="filter-widget">
+                          <h4 class="fw-title">Price</h4>
+                          <div class="min-price">
+                              <input type="number" min="0" placeholder="Min" name="min-price-input">
+                          </div>
+                          <div class="max-price">
+                              <input type="number" min="0" placeholder="Max" name="max-price-input">
+                          </div>
+                          <div class="currency-unit">$</div>
+                          <button type="button" id="filter-btn" class="btn btn-success">Filter</button>
+                      </div>
+                  </div>
+                  <div class="col-lg-9">
+                      <div class="row pdt-block">
+                         <div class="pdt-left">
+                              <div class="product-img">
+                                  <div class="pro-img-detail">
+                                      <img src="assets/images/{{productDetail[0].ProductImage}}" alt="">
+                                  </div>
+
+                              </div>
+                         </div>
+                          <div class="product-detailed">
+                              <div class="pdt-name">
+                                  <h4>{{productDetail[0].ProductName}}</h4>
+                              </div>
+                              <div class="pdt-price">
+                                  Price:
+                                  <span id="pdt-old-price">$$$$</span>
+                                  <span id="pdt-new-price"><p>{{productDetail[0].Price}}</p></span>
+                              </div>
+                              <div class="pdt-model">
+                                  DC F-LSD10 (H)-Item code: {{productDetail[0].Description}}
+                              </div>
+                              <div class="pdt-warranty">
+                                  Warranty: <span>12 months</span>
+                              </div>
+                              <div class="pdt-status">
+                                  <h6>IN STOCK</h6>
+                              </div>
+                              <div class="pdt-star">
+                                  <i class="fas fa-star"></i>
+                                  <i class="fas fa-star"></i>
+                                  <i class="fas fa-star"></i>
+                                  <i class="fas fa-star"></i>
+                                  <i class="fas fa-star-half-alt"></i>
+                                  <span>(5)</span>
+                              </div>
+                              <div class="quantity">
+                                  <button id="dec" onclick="decQty()">-</button>
+                                  <input type="text" value="1" id="qty">
+                                  <button id="inc" onclick="incQty()">+</button>
+                              </div>
+                              <div class="pdt-action">
+                                  <div class="buy-now"><a href="#">BUY NOW</a></div>
+                                  <div class="add-to-cart"><a href="#">ADD TO CART</a></div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="row cus-tab">
+                          <div class="tab">
+                              <button class="tablinks" onclick="switchnav(event, 'review')" id="default-opened">Customer Review</button>
+                              <button class="tablinks" onclick="switchnav(event, 'des')">Description</button>
+                              <button class="tablinks" onclick="switchnav(event, 'spec')">Specifications</button>
+                          </div>
+                          <div id="review" class="tabcontent">
+                              <h2>2 Comments</h2>
+                              <div class="cus-care">
+                                  <img src="assets/images/cus1.jpg" alt="">
+                                  <div class="cus-info">
+                                      <div class="fb-star">
+                                          <i class="fas fa-star"></i>
+                                          <i class="fas fa-star"></i>
+                                          <i class="fas fa-star"></i>
+                                          <i class="fas fa-star"></i>
+                                          <i class="fas fa-star-half-alt"></i>
+                                      </div>
+                                      <div class="cus-name">
+                                          <h5>Katty Perry<span> - 02-01-2021</span></h5>
+                                      </div>
+                                      <div class="cus-comment">
+                                          <span>Nice !</span>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="cus-care">
+                                  <img src="assets/images/cus2.jpg" alt="">
+                                  <div class="cus-info">
+                                      <div class="fb-star">
+                                          <i class="fas fa-star"></i>
+                                          <i class="fas fa-star"></i>
+                                          <i class="fas fa-star"></i>
+                                          <i class="fas fa-star"></i>
+                                          <i class="fas fa-star-half-alt"></i>
+                                      </div>
+                                      <div class="cus-name">
+                                          <h5>Join Cena<span> - 02-01-2021</span></h5>
+                                      </div>
+                                      <div class="cus-comment">
+                                          <span>Nice !</span>
+                                      </div>
+
+                                  </div>
+                              </div>
+                              <div class="comment-leave">
+                                  <h2>Your review</h2>
+                                  <form action="#">
+                                      <input type="text" required="required" id="input-text" placeholder="Name">
+                                      <input type="email" required="required" placeholder="Email">
+                                     <textarea name="" id="" cols="90" rows="10" required="required" placeholder="Review"></textarea>
+                                     <button type="submit">SEND YOUR REVIEW</button>
+                                  </form>
+                              </div>
+                          </div>
+                          <div id="des" class="tabcontent">
+                              <h2>Introduction</h2>
+                              <p>The fan has up to 9 blades, 30 W power, effective cooling.
+                                  Set up 4 wind modes, 26 levels of wind speed, convenient 12-hour off timer.
+                                  Inverter function saves up to 70% energy.
+                                  The height varies flexibly from 113 - 133 cm depending on needs.</p>
+                          </div>
+                          <div id="spec" class="tabcontent">
+                              <table>
+                                  <tr>
+                                      <th>Fan type</th>
+                                      <td>Stand Fan</td>
+                                  </tr>
+                                  <tr>
+                                      <th>Size</th>
+                                      <td>Horizontal 45.5 cm - Height 133 cm - Depth 40 cm</td>
+                                  </tr>
+                                  <tr>
+                                      <th>Wingspan</th>
+                                      <td>40 cm</td>
+                                  </tr>
+                                  <tr>
+                                      <th>Wattage</th>
+                                      <td>30W</td>
+                                  </tr>
+                                  <tr>
+                                      <th>Wind speed and controls</th>
+                                      <td>4 wind speeds, 26 wind speeds</td>
+                                  </tr>
+                                  <tr>
+                                      <th>Hightlights</th>
+                                      <td>Handy timer feature, Change height from 113 - 133 cm, energy-saving inverter, 9 wings</td>
+                                  </tr>
+                                  <tr>
+                                      <th>Origin</th>
+                                      <td>China</td>
+                                  </tr>
+                                  <tr>
+                                      <th>Warranty period</th>
+                                      <td>12 months</td>
+                                  </tr>
+                              </table>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="row related-pro">
+                  <h2>Related Product</h2>
+                  <div class="row row-items">
+                      <div class="product-item">
+                          <figure>
+                              <a href="">
+                                  <div class="onsale">
+                                      <span>-15%</span>
+                                  </div>
+                                  <img src="assets/images/fan-3.png" alt="" height="200px">
+                              </a>
+                              <figcaption>
+                                  <a href=""><p class="text-truncate">Mezzanine fan Electromechanical QDM400ĐB-K</p></a>
+                                  <span id="old-price">$25.55</span>
+                                  <span id="pro-price">$21.72</span>
+                              </figcaption>
+                          </figure>
+                      </div>
+
+                      <div class="product-item">
+                          <figure>
+                              <a href="">
+                                  <div class="onsale">
+                                      <span>-20%</span>
+                                  </div>
+                                  <img src="assets/images/fan-4.png" alt="" height="200px">
+                              </a>
+                              <figcaption>
+                                  <a href=""><p class="text-truncate">Electromechanical table fan QB300-D</p></a>
+                                  <span id="old-price">$35.00</span>
+                                  <span id="pro-price">$28.00</span>
+                              </figcaption>
+                          </figure>
+                      </div>
+
+                      <div class="product-item">
+                          <figure>
+                              <a href="">
+                                  <div class="onsale">
+                                      <span>-10%</span>
+                                  </div>
+                                  <img src="assets/images/fan-2.png" alt="" height="200px">
+                              </a>
+                              <figcaption>
+                                  <a href=""><p class="text-truncate">Senko LL1338 Mezzanine Fan</p></a>
+                                  <span id="old-price">$10.00</span>
+                                  <span id="pro-price">$9.00</span>
+                              </figcaption>
+                          </figure>
+                      </div>
+
+                      <div class="product-item">
+                          <figure>
+                              <a href="">
+                                  <div class="onsale">
+                                      <span>-35%</span>
+                                  </div>
+                                  <img src="assets/images/fan-5.jpg" alt="" height="200px">
+                              </a>
+                              <figcaption>
+                                  <a href=""><p class="text-truncate">Midea FW40-15VF wall fan</p></a>
+                                  <span id="old-price">$77.86</span>
+                                  <span id="pro-price">$50.61</span>
+
+                              </figcaption>
+                          </figure>
+                      </div>
+
+                      <div class="product-item">
+                          <figure>
+                              <a href="">
+                                  <div class="onsale">
+                                      <span>-50%</span>
+                                  </div>
+                                  <img src="assets/images/fan-6.jpg" alt="" height="200px">
+                              </a>
+                              <figcaption>
+                                  <a href=""><p class="text-truncate">Midea Fan Mezzanine FTS40-17VD</p></a>
+                                  <span id="old-price">$44.16</span>
+                                  <span id="pro-price">$22.08</span>
+
+                              </figcaption>
+                          </figure>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </section>
+      <hr>
+      <div class="user-benefit">
+          <div class="container">
+              <div class="row">
+                  <div class="col-lg-4 bnf-block">
+                      <img src="assets/images/high-quality-icon.png" alt="" width="100px" height="100px">
+                      <h4>high quality</h4>
+                  </div>
+                  <div class="col-lg-4 bnf-block">
+                      <img src="assets/images/return-icon.jpg" alt="" width="100px" height="100px">
+                      <h4>easy to return</h4>
+                  </div>
+                  <div class="col-lg-4 bnf-block">
+                      <img src="assets/images/24-7-support-icon.png" alt="" width="100px" height="100px">
+                      <h4>24/7 support</h4>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="brand">
+          <div class="container">
+              <div class="row">
+                  <div class="col-lg-2"><img src="assets/images/philips086473574.jpg" alt="" height="40px"></div>
+                  <div class="col-lg-2"><img src="assets/images/Panasonic873768367.jpg" alt="" height="40px"></div>
+                  <div class="col-lg-2"><img src="assets/images/Mennekes520246502.jpg" alt="" height="40px"></div>
+                  <div class="col-lg-2"><img src="assets/images/Cadivi847106821.jpg" alt="" height="40px"></div>
+                  <div class="col-lg-2"><img src="assets/images/Paragon760064346.jpg" alt="" height="40px"></div>
+                  <div class="col-lg-2"><img src="assets/images/SchneiderElectric412485467.jpg" alt="" height="40px"></div>
+              </div>
+          </div>
+      </div>
+
+  </div>
+</div>

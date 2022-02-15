@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SharedService } from 'src/app/shared.service';
 
 @Component({
   selector: 'app-productbest',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductbestComponent implements OnInit {
 
-  constructor() { }
+  productList:any = [];
+  product:any;
+
+  constructor(private sharedService:SharedService) { }
 
   ngOnInit(): void {
+    this.refreshProductList();
   }
-
+  refreshProductList(){
+    this.sharedService.getProductList().subscribe(data =>{
+      this.productList = data;
+    });
+  }
 }
